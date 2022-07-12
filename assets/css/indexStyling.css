@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Joan&family=Koulen&family=Playfair+Display:wght@600&family=Poppins:wght@100&family=Tai+Heritage+Pro&display=swap");
+
+* {
+  font-family: Koulen, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.page {
+  width: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.btnS {
+  display: flex;
+  flex-direction: row;
+}
+
+.startBtn,
+.hcBtn {
+  margin-left: 6vh;
+  margin-bottom: 7vh;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 2.5vh;
+}
+a:hover {
+  opacity: 75%;
+}
+.tittle {
+  font-size: 10vh;
+  margin-bottom: 7vh;
+}
+.rulesList {
+  margin-bottom: 2vh;
+}
+.startBtn {
+  background-color: lightgreen;
+  padding: 2vh;
+  padding-left: 7.5vh;
+  padding-right: 7.5vh;
+  border: black solid;
+  border-width: 0.5vh;
+  border-radius: 10px;
+}
+.hcBtn {
+  background-color: yellow;
+  padding: 2vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  border: black solid;
+  border-width: 0.5vh;
+  border-radius: 10px;
+}

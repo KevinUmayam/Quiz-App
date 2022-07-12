@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Joan&family=Koulen&family=Playfair+Display:wght@600&family=Poppins:wght@100&family=Tai+Heritage+Pro&display=swap");
+
+* {
+  font-family: Koulen, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.topS {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1vh;
+  margin-bottom: 6vh;
+}
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 5vh;
+}
+.hcBtn {
+  background-color: yellow;
+  padding: 0.1vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  border: black solid;
+  border-width: 0.5vh;
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+@media screen and (max-width: 129px) {
+  .timer {
+    font-size: 3vh;
+  }
+  .hcBtn {
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
+}
+/* body css here */
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.choiceBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(182, 175, 175);
+
+  border: black solid;
+  margin: 1vh;
+}
+@media screen and (max-width: 306px) {
+  .choiceBox {
+    margin-right: 0px;
+  }
+}
+.choice {
+  padding-right: 5vh;
+}
