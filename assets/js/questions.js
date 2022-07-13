@@ -1,7 +1,7 @@
 // TODO: store all questions here
 // NOTE: hint - can use an array that contains objects
 // list of all questions, choices, and answers
-let questions = [
+var questions = [
   {
     title: "Which of the following animals is not considered a mammal?",
     choice1: "Tiger",
