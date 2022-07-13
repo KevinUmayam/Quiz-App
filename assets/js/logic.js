@@ -22,7 +22,7 @@ function startTimer() {
 }
 
 //start the timer function bellow
-// startTimer();
+startTimer();
 // var questionsT = questions.map(function (question) {
 //   return question.title;
 // });
