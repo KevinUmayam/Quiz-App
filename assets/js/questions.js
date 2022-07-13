@@ -21,7 +21,7 @@ let questions = [
     answer: 1,
   },
   {
-    title: "Which of the following has the strongest jaw?",
+    title: "Which of the following animals has the strongest jaw?",
     choice1: "Orangutan",
     choice2: "Komodo dragon",
     choice3: "Crocodile",
@@ -39,7 +39,7 @@ let questions = [
     answer: 4,
   },
   {
-    title: "which of the following is an endangered species?",
+    title: "which of the following animals is an endangered species?",
     choice1: "Red panda",
     choice2: "Gray wolf",
     choice3: "Black bear",

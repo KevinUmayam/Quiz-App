@@ -4,6 +4,11 @@
   font-family: Koulen, Arial, Helvetica, sans-serif;
   margin: 0;
 }
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 .topS {
   display: flex;
   flex-direction: column-reverse;
@@ -12,7 +17,7 @@
   margin-top: 1vh;
   margin-bottom: 6vh;
 }
-.timer {
+.timerT {
   display: flex;
   flex-wrap: wrap;
 
@@ -32,7 +37,7 @@
   font-weight: bolder;
 }
 @media screen and (max-width: 129px) {
-  .timer {
+  .timerT {
     font-size: 3vh;
   }
   .hcBtn {
@@ -41,28 +46,27 @@
   }
 }
 /* body css here */
+
 .body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  margin: auto;
+  display: inline-block;
 }
+
 .choiceBox {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(182, 175, 175);
-
-  border: black solid;
-  margin: 1vh;
+  background-color: rgb(112, 194, 197);
+  margin-bottom: 1vh;
+  border: black solid 3px;
 }
-@media screen and (max-width: 306px) {
-  .choiceBox {
-    margin-right: 0px;
-  }
+.choiceBox:hover {
+  opacity: 75%;
 }
-.choice {
-  padding-right: 5vh;
+.question {
+  font-size: 3vh;
+  margin-bottom: 10px;
+}
+.choiceNum {
+  padding-right: 0.5vh;
+  padding-left: 0.5vh;
+  font-size: 2vh;
 }
