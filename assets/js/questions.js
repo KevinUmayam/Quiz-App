@@ -9,7 +9,7 @@ var questions = [
     choice3: "Whale",
     choice4: "Frog",
     //frog
-    answer: 4,
+    answer: "Frog",
   },
   {
     title: "Which animal can reach the highest speed?",
@@ -18,7 +18,7 @@ var questions = [
     choice3: "Lion",
     choice4: "Sonoran iguana",
     //cheetah
-    answer: 1,
+    answer: "Cheetah",
   },
   {
     title: "Which of the following animals has the strongest jaw?",
@@ -27,7 +27,7 @@ var questions = [
     choice3: "Crocodile",
     choice4: "Dolphin",
     //Crocodile
-    answer: 3,
+    answer: "Crocodile",
   },
   {
     title: "Which is the fastest swimmer?",
@@ -36,7 +36,7 @@ var questions = [
     choice3: "Tiger shark",
     choice4: "Sail fish",
     //Sail fish
-    answer: 4,
+    answer: "Sail fish",
   },
   {
     title: "which of the following animals is an endangered species?",
@@ -45,6 +45,6 @@ var questions = [
     choice3: "Black bear",
     choice4: "Camel",
     //Red panda
-    answer: 1,
+    answer: "Red panda",
   },
 ];
