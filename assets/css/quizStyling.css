@@ -73,3 +73,22 @@
 .choice {
   width: 100%;
 }
+.hidden {
+  display: none;
+}
+
+.right {
+  display: flex;
+  background-color: rgb(10, 248, 50);
+  margin-bottom: 1vh;
+  border: black solid 3px;
+  font-size: 3vh;
+}
+
+.wrong {
+  display: flex;
+  background-color: rgb(185, 19, 19);
+  margin-bottom: 1vh;
+  border: black solid 3px;
+  font-size: 3vh;
+}
