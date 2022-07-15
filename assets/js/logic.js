@@ -14,12 +14,16 @@ const atMost = 5;
 const questionsT = [];
 let currentQ = {};
 let currentQIndex = 0;
-let timerCount = 100;
+let timerCount = 50;
+let score;
 //time countdown function
 function startTimer() {
   let timer = setInterval(function () {
-    if (timerCount <= 0) {
-      return window.location.assign("./highscores.html");
+    if (timerCount <= 1 || currentQIndex > 3) {
+      clearInterval(timer);
+      score = timerCount;
+      console.log(score);
+      terminateQ();
     }
     timerCount--;
     timerEl.textContent = "remaining time: " + timerCount;
@@ -44,19 +48,23 @@ function newQselector() {
   // var questionList = Math.floor(Math.random() * questionsT.length);
   currentQ = questionsT[currentQIndex];
   currentQIndex++;
-  console.log(questionsT);
+  console.log(currentQ);
   question.innerText = currentQ.title;
   choice1.innerText = currentQ.choice1;
   choice2.innerText = currentQ.choice2;
   choice3.innerText = currentQ.choice3;
   choice4.innerText = currentQ.choice4;
+  // if (currentQIndex < 4) {
+  //   clearInterval(timer);
+  // }
 }
 
 startQuiz();
 
 function questionTimeDeduct(e) {
   console.log(e);
-  console.log(currentQ.answer);
+  // console.log(currentQ.answer);
+
   if (e != currentQ.answer) {
     var wrongC = document.getElementById("result1");
     wrongC.setAttribute("class", "wrong");
@@ -65,7 +73,7 @@ function questionTimeDeduct(e) {
       wrongC.setAttribute("class", "hidden");
     }, 1000);
 
-    timerCount = timerCount - 15;
+    timerCount = timerCount - 20;
 
     newQselector();
   } else {
@@ -89,7 +97,4 @@ choice.forEach((element, i) => {
     questionTimeDeduct(event.target.innerHTML);
   });
 });
-
-//  if (currentQIndex > questionsT.length) {
-//    return window.location.assign("./highscores.html");
-//  }
+function terminateQ() {}
