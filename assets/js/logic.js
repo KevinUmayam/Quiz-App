@@ -126,16 +126,12 @@ function saveInfo() {
     let playerScore =
       JSON.parse(window.localStorage.getItem("playerScore")) || [];
     console.log(playerScore);
-    var newScore = {
+    let newScore = {
       score: timerCount,
       initials: initials,
     };
 
     playerScore.push(newScore);
-    // playerScore.sort(a,b) => {
-    //   return b.score - a.score
-    // };
-    // playerScore.splice(5);
 
     window.localStorage.setItem("playerScore", JSON.stringify(playerScore));
     console.log("b" + playerScore);
@@ -143,3 +139,21 @@ function saveInfo() {
 }
 savebtn.onClick = saveInfo;
 // score = timerCount - 1;
+
+function displayScore() {
+  const finalList = document.querySelector("#scoreol");
+  let playerScore =
+    JSON.parse(window.localStorage.getItem("playerScore")) || [];
+
+  finalList.innerHTML = playerScore.map((score) => {
+    return `<li>${score.initials}-${score.score}</li>`;
+  }).join;
+  console.log(finalList);
+  // playerScore.forEach(function (score) {
+  //   var liTag = document.createElement("li");
+  //   liTag.textContent = score.initials + " - " + score.score;
+
+  //   var olEl = document.getElementById("scoreol");
+  //   olEl.appendChild(liTag);
+  // });
+}
