@@ -8,21 +8,23 @@ const choice4 = document.querySelector(".choice4");
 let choice = document.querySelectorAll(".choice");
 const timerEl = document.querySelector(".time");
 console.log(choice);
+let initialsEl = document.querySelector("#inicialS");
+// test
+let savebtn = document.querySelector(".save");
 // questions
 let acceptingAswers = false;
 const atMost = 5;
 const questionsT = [];
 let currentQ = {};
 let currentQIndex = 0;
-let timerCount = 50;
+let timerCount = 100;
 let score;
 //time countdown function
 function startTimer() {
   let timer = setInterval(function () {
-    if (timerCount <= 1 || currentQIndex > 3) {
+    if (timerCount <= 1 || currentQIndex > 5) {
       clearInterval(timer);
-      score = timerCount;
-      console.log(score);
+
       terminateQ();
     }
     timerCount--;
@@ -97,4 +99,47 @@ choice.forEach((element, i) => {
     questionTimeDeduct(event.target.innerHTML);
   });
 });
-function terminateQ() {}
+
+savebtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const endF = document.getElementById("submit");
+  endF.setAttribute("class", "hidden");
+
+  const endS = document.getElementById("endS");
+  endS.setAttribute("class", "form");
+  saveInfo();
+});
+
+function terminateQ() {
+  const changeB = document.getElementById("body");
+  changeB.setAttribute("class", "hidden");
+
+  const endF = document.getElementById("submit");
+  endF.setAttribute("class", "form");
+}
+
+// test
+function saveInfo() {
+  let initials = initialsEl.value;
+
+  if (initials !== "") {
+    let playerScore =
+      JSON.parse(window.localStorage.getItem("playerScore")) || [];
+    console.log(playerScore);
+    var newScore = {
+      score: timerCount,
+      initials: initials,
+    };
+
+    playerScore.push(newScore);
+    // playerScore.sort(a,b) => {
+    //   return b.score - a.score
+    // };
+    // playerScore.splice(5);
+
+    window.localStorage.setItem("playerScore", JSON.stringify(playerScore));
+    console.log("b" + playerScore);
+  }
+}
+savebtn.onClick = saveInfo;
+// score = timerCount - 1;

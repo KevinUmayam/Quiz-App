@@ -92,3 +92,16 @@
   border: black solid 3px;
   font-size: 3vh;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5vh;
+}
+.highS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

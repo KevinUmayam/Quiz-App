@@ -14,7 +14,8 @@
       </div>
       <a href="./highscores.html" class="hcBtn" id="try">High scores</a>
     </section>
-    <section class="body">
+
+    <section id="body" class="body">
       <h3 class="question">this is the question right here.</h3>
       <!-- choice -->
       <div class="choiceBox">
@@ -41,6 +42,21 @@
       <p id="result1" class="hidden">incorrect choice</p>
       <p id="result2" class="hidden">correct choice</p>
     </section>
+    <!-- form here -->
+    <div id="submit" class="hidden">
+      <form action="" method="get" class="form">
+        <div class="form-example">
+          <label for="name">Enter your inicials: </label>
+          <input type="text" name="name" id="inicialS" max="3" required />
+          <button class="save">Save highscore</button>
+        </div>
+      </form>
+    </div>
+    <div id="endS" class="hidden">
+      <h1>highscores</h1>
+      <ol id="scoreol"></ol>
+      <button>Back to start</button>
+    </div>
   </body>
   <script src="./assets/js/questions.js"></script>
   <script src="./assets/js/logic.js"></script>
