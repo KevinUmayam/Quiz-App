@@ -32,12 +32,7 @@ function startTimer() {
   }, 1000);
 }
 
-//start the timer function bellow
 startTimer();
-// var questionsT = questions.map(function (question) {
-//   return question.title;
-// });
-// console.log(questionsT);
 
 function startQuiz() {
   newQselector();
@@ -56,9 +51,6 @@ function newQselector() {
   choice2.innerText = currentQ.choice2;
   choice3.innerText = currentQ.choice3;
   choice4.innerText = currentQ.choice4;
-  // if (currentQIndex < 4) {
-  //   clearInterval(timer);
-  // }
 }
 
 startQuiz();
@@ -116,11 +108,12 @@ function terminateQ() {
 
   const endF = document.getElementById("submit");
   endF.setAttribute("class", "form");
+  displayScore();
 }
 
 // test
 function saveInfo() {
-  let initials = initialsEl.value;
+  let initials = initialsEl.value.trim();
 
   if (initials !== "") {
     let playerScore =
@@ -130,30 +123,24 @@ function saveInfo() {
       score: timerCount,
       initials: initials,
     };
-
+    console.log(newScore);
     playerScore.push(newScore);
-
+    console.log(newScore);
     window.localStorage.setItem("playerScore", JSON.stringify(playerScore));
     console.log("b" + playerScore);
   }
 }
 savebtn.onClick = saveInfo;
-// score = timerCount - 1;
 
 function displayScore() {
-  const finalList = document.querySelector("#scoreol");
-  let playerScore =
+  const finalList =
     JSON.parse(window.localStorage.getItem("playerScore")) || [];
 
-  finalList.innerHTML = playerScore.map((score) => {
-    return `<li>${score.initials}-${score.score}</li>`;
-  }).join;
-  console.log(finalList);
-  // playerScore.forEach(function (score) {
-  //   var liTag = document.createElement("li");
-  //   liTag.textContent = score.initials + " - " + score.score;
+  finalList.forEach(function (score) {
+    var liTag = document.createElement("li");
+    liTag.textContent = score.initials + " - " + score.score;
 
-  //   var olEl = document.getElementById("scoreol");
-  //   olEl.appendChild(liTag);
-  // });
+    var olEl = document.getElementById("scoreol");
+    olEl.appendChild(liTag);
+  });
 }

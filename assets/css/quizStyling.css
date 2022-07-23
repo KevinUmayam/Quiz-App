@@ -51,7 +51,9 @@
   margin: auto;
   display: inline-block;
 }
-
+.choice {
+  font-size: 3vh;
+}
 .choiceBox {
   display: flex;
   background-color: rgb(112, 194, 197);
@@ -68,7 +70,7 @@
 .choiceNum {
   padding-right: 0.5vh;
   padding-left: 0.5vh;
-  font-size: 3.2vh;
+  font-size: 3vh;
 }
 .choice {
   width: 100%;
